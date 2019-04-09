@@ -1,0 +1,28 @@
+resolver: lts-13.15
+
+packages:
+- .
+
+extra-deps:
+- git: git@github.com:input-output-hk/plutus.git
+  commit: e033ab6ebe13a814ab2bbed4232117d57a2ff7ee
+  subdirs:
+    - plutus-contract-exe
+    - language-plutus-core
+    - plutus-core-interpreter
+    - plutus-exe
+    - plutus-ir
+    - plutus-tx
+    - plutus-use-cases
+    - interpreter
+    - marlowe
+    - meadow
+    - wallet-api
+    - plutus-playground-server
+    - plutus-playground-lib
+    - plutus-tutorial
+
+- git: https://github.com/input-output-hk/cardano-crypto.git
+  commit: f5cecb6e424cc84f85b6a3e1f803517bb7b4cfb1
+
+- composition-prelude-2.0.2.1

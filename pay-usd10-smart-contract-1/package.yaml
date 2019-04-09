@@ -1,0 +1,46 @@
+name:       pay-usd10-smart-contract
+synopsis:   A sample smart contract for paying USD10 in ADA
+version:    "0.1.0"
+author:     Javier Casas <javcasas@gmail.com>
+copyright:  2019 Javier Casas, All rights reserved. See LICENSE for more details.
+github:     javcasas/pay-usd10-smart-contract
+
+dependencies:
+
+- base
+- bytestring
+- text
+- template-haskell
+- yaml
+- data-default
+- aeson
+- unordered-containers
+- containers
+- foreign-store
+- language-plutus-core
+- plutus-tx
+- plutus-core-interpreter
+- wallet-api
+- mtl
+- cardano-crypto
+
+# The library contains all of our application code. The executable
+# defined below is just a thin wrapper.
+library:
+  source-dirs: src
+  ghc-options:
+  - -Wall
+  - -fwarn-tabs
+  - -O0
+  cpp-options: -DDEVELOPMENT
+
+# Test suite
+tests:
+  plutus-yesod-starter-app-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options: -Wall
+    dependencies:
+    - pay-usd10-smart-contract
+    - hspec >=2.0.0
+    - lens
