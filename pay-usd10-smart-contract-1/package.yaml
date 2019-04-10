@@ -3,7 +3,7 @@ synopsis:   A sample smart contract for paying USD10 in ADA
 version:    "0.1.0"
 author:     Javier Casas <javcasas@gmail.com>
 copyright:  2019 Javier Casas, All rights reserved. See LICENSE for more details.
-github:     javcasas/pay-usd10-smart-contract
+github:     javcasas/smart-contract-samples
 
 dependencies:
 
